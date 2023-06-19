@@ -24,13 +24,10 @@
       <nav class="navbar">
          <a href="#home">home</a>
          <a href="#about">about</a>
-         <!-- <a href="#room">room</a> -->
          <a href="#gallery">gallery</a>
          <a href="#review">review</a>
          <a href="#faq">faq</a>
-         <a href="#" class="login-button">Login</a>
-         <a href="/signup_login">SignUp</a>
-         <a href="#reservation" class="btn"> book now</a>
+         <a href="booknow/" class="btn"> book now</a>
          
       </nav>
 
@@ -51,28 +48,28 @@
             <div class="swiper-slide slide" style="background: url({% static 'images/home-slide1.jpg'%}) no-repeat;">
                <div class="content">
                   <h3>Experience the world on a budget</h3>
-                  <a href="#" class="btn"> visit our offers</a>
+                  <a href="booknow/" class="btn"> Book Now</a>
                </div>
             </div>
 
             <div class="swiper-slide slide" style="background: url({% static 'images/home-slide2.jpg'%}) no-repeat;">
                <div class="content">
                   <h3>Stay, explore, connect</h3>
-                  <a href="#" class="btn"> visit our offer</a>
+                  <a href="booknow/" class="btn"> Book Now</a>
                </div>
             </div>
 
             <div class="swiper-slide slide" style="background: url({% static 'images/home-slide3.jpg'%}) no-repeat;">
                <div class="content">
                   <h3>Stay at our budget-friendly hostels</h3>
-                  <a href="#" class="btn"> visit our offer</a>
+                  <a href="booknow/" class="btn"> Book Now</a>
                </div>
             </div>
 
             <div class="swiper-slide slide" style="background: url({% static 'images/home-slide4.jpg'%}) no-repeat;">
                <div class="content">
                   <h3>it's where dreams come true</h3>
-                  <a href="#" class="btn"> visit our offer</a>
+                  <a href="booknow/" class="btn"> Book Now</a>
                </div>
             </div>
 
@@ -86,68 +83,6 @@
    </section>
 
    <!-- end -->
-
-   <!-- availability -->
-
-   <!-- <section class="availability">
-
-      <form action="">
-
-         <div class="box">
-            <p>check in <span>*</span></p>
-            <input type="date" class="input">
-         </div>
-
-         <div class="box">
-            <p>check out <span>*</span></p>
-            <input type="date" class="input">
-         </div>
-
-         <div class="box">
-            <p>adults <span>*</span></p>
-            <select name="adults" id="" class="input">
-               <option value="1">1 adults</option>
-               <option value="2">2 adults</option>
-               <option value="3">3 adults</option>
-               <option value="4">4 adults</option>
-               <option value="5">5 adults</option>
-               <option value="6">6 adults</option>
-            </select>
-         </div>
-
-         <div class="box">
-            <p>children <span>*</span></p>
-            <select name="child" id="" class="input">
-               <option value="1">1 child</option>
-               <option value="2">2 child</option>
-               <option value="3">3 child</option>
-               <option value="4">4 child</option>
-               <option value="5">5 child</option>
-               <option value="6">6 child</option>
-            </select>
-         </div>
-
-         <div class="box">
-            <p>rooms <span>*</span></p>
-            <select name="rooms" id="" class="input">
-               <option value="1">1 rooms</option>
-               <option value="2">2 rooms</option>
-               <option value="3">3 rooms</option>
-               <option value="4">4 rooms</option>
-               <option value="5">5 rooms</option>
-               <option value="6">6 rooms</option>
-            </select>
-         </div>
-
-         <input type="submit" value="check availability" class="btn">
-
-      </form>
-
-   </section> -->
-
-   <!-- end -->
-
-
    <!-- about -->
 
    <section class="about" id="about">
@@ -187,134 +122,12 @@ Safe travels,
 
    <!-- end -->
 
-   <!-- room -->
 
-   <!-- <section class="room" id="room">
 
-      <h1 class="heading">our room</h1>
-
-      <div class="swiper room-slider">
-
-         <div class="swiper-wrapper">
-
-            <div class="swiper-slide slide">
-               <div class="image">
-                  <span class="price">₹7999/night</span>
-                  <img src="images/room-1.jpg" alt="">
-                  <a href="#" class="fas fa-shopping-cart"></a>
-               </div>
-               <div class="content">
-                  <h3>Private Room</h3>
-                  <p>
-                     Private rooms in hostels are designed for those seeking more privacy. These rooms can vary in size and may include a double bed, twin beds, or multiple beds for larger groups or families. Private rooms usually come with shared or ensuite bathrooms, depending on the hostel.</p>
-                  <div class="stars">
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star-half-alt"></i>
-                  </div>
-                  <a href="#" class="btn">book now</a>
-               </div>
-            </div>
-
-            <div class="swiper-slide slide">
-               <div class="image">
-                  <span class="price">₹1999/night</span>
-                  <img src="images/room-2.jpg" alt="">
-                  <a href="#" class="fas fa-shopping-cart"></a>
-               </div>
-               <div class="content">
-                  <h3>Dormitory/Shared Room</h3>
-                  <p>
-                     Dormitory rooms are the most common type of accommodation in hostels. These rooms are shared with multiple travelers and typically consist of bunk beds or single beds.</p>
-                  <div class="stars">
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star-half-alt"></i>
-                  </div>
-                  <a href="#" class="btn">book now</a>
-               </div>
-            </div>
-
-            <div class="swiper-slide slide">
-               <div class="image">
-                  <span class="price">₹4999/night</span>
-                  <img src="images/room-3.jpg" alt="">
-                  <a href="#" class="fas fa-shopping-cart"></a>
-               </div>
-               <div class="content">
-                  <h3>Ensuite Room</h3>
-                  <p>
-                     Ensuite rooms are private rooms that feature a private bathroom within the room. This offers more convenience and privacy as you won't have to share the bathroom with other guests. Ensuite rooms can range from single occupancy to accommodate multiple guests</p>
-                  <div class="stars">
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star-half-alt"></i>
-                  </div>
-                  <a href="#" class="btn">book now</a>
-               </div>
-            </div>
-
-            <div class="swiper-slide slide">
-               <div class="image">
-                  <span class="price">₹999/night</span>
-                  <img src="images/room-4.jpg" alt="">
-                  <a href="#" class="fas fa-shopping-cart"></a>
-               </div>
-               <div class="content">
-                  <h3>Female-Only Dorm</h3>
-                  <p>
-                     Some hostels offer female-only dormitories or floors, providing a safe and comfortable space for female travelers. These dorms are exclusively for women and often have shared bathroom facilities dedicated to female guests.</p>
-                  <div class="stars">
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star-half-alt"></i>
-                  </div>
-                  <a href="#" class="btn">book now</a>
-               </div>
-            </div>
-
-            <div class="swiper-slide slide">
-               <div class="image">
-                  <span class="price">₹6999/night</span>
-                  <img src="images/room-5.jpg" alt="">
-                  <a href="#" class="fas fa-shopping-cart"></a>
-               </div>
-               <div class="content">
-                  <h3>Family Room</h3>
-                  <p>
-                     Family rooms in hostels are designed to accommodate families or small groups. These rooms can vary in size and may include a combination of double beds, bunk beds, or single beds to cater to different family sizes. Family rooms often come with shared or ensuite bathrooms.</p>
-                  <div class="stars">
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star-half-alt"></i>
-                  </div>
-                  <a href="#" class="btn">book now</a>
-               </div>
-            </div>
-
-     
-
-         </div>
-
-         <div class="swiper-pagination"></div>
-
-      </div>
-
-   </section> -->
-
-   <!-- end -->
-
-   <!-- services -->
+        
+              
+               
+   {% comment %} services {% endcomment %}
 
    <section class="services">
 
@@ -592,93 +405,6 @@ Safe travels,
    </section>
 
    <!-- end -->
-
-   <!-- reservation -->
-
-   <section class="reservation" id="reservation">
-
-      <h1 class="heading">book now</h1>
-
-      <form action="">
-
-         <div class="container">
-
-            <div class="box">
-               <p>name <span>*</span></p>
-               <input type="text" class="input" placeholder="Your Name">
-            </div>
-
-            <div class="box">
-               <p>email <span>*</span></p>
-               <input type="text" class="input" placeholder="Your Email">
-            </div>
-
-            <div class="box">
-               <p>check in <span>*</span></p>
-               <input type="date" class="input">
-            </div>
-
-            <div class="box">
-               <p>check out <span>*</span></p>
-               <input type="date" class="input">
-            </div>
-
-            <div class="box">
-               <p>adults <span>*</span></p>
-               <select name="adults" class="input">
-                  <option value="1">1 adults</option>
-                  <option value="2">2 adults</option>
-                  <option value="3">3 adults</option>
-                  <option value="4">4 adults</option>
-                  <option value="5">5 adults</option>
-                  <option value="6">6 adults</option>
-               </select>
-            </div>
-
-            <div class="box">
-               <p>children <span>*</span></p>
-               <select name="child" class="input">
-                  <option value="1">1 child</option>
-                  <option value="2">2 child</option>
-                  <option value="3">3 child</option>
-                  <option value="4">4 child</option>
-                  <option value="5">5 child</option>
-                  <option value="6">6 child</option>
-               </select>
-            </div>
-
-            <div class="box">
-               <p>rooms <span>*</span></p>
-               <select name="rooms" class="input">
-                  <option value="1">1 rooms</option>
-                  <option value="2">2 rooms</option>
-                  <option value="3">3 rooms</option>
-                  <option value="4">4 rooms</option>
-                  <option value="5">5 rooms</option>
-                  <option value="6">6 rooms</option>
-               </select>
-            </div>
-
-            <div class="box">
-               <p>room type <span>*</span></p>
-               <select name="type" class="input">
-                  <option value="1">exclusive rooms</option>
-                  <option value="2">family rooms</option>
-                  <option value="3">daily rooms</option>
-                  <option value="4">panoramic rooms</option>
-               </select>
-            </div>
-   
-         </div>
-
-         <input type="submit" value="check availability" class="btn">
-
-      </form>
-
-   </section>
-
-   <!-- end -->
-
    <!-- footer -->
 
    <section class="footer">
@@ -699,11 +425,8 @@ Safe travels,
             <a href="#"> <i class="fas fa-arrow-right"></i> about</a>
             <a href="#"> <i class="fas fa-arrow-right"></i> rooms</a>
             <a href="#"> <i class="fas fa-arrow-right"></i> gallery</a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> reservation</a>
+            <a href="booknow/"> <i class="fas fa-arrow-right"></i> reservation</a>
          </div>
-
-   
-
       </div>
 
       <div class="share">
@@ -718,26 +441,7 @@ Safe travels,
    </section>
 
    <!-- end -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
    <script src="{% static 'script.js'%}"></script>
 
 </body>

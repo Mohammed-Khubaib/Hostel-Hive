@@ -1,22 +1,30 @@
 {% extends 'base.html' %}
 {% block title %}Booknow{% endblock title %}
 {% load static %}
-    {% comment %} <link rel="stylesheet" href="{% static 'styles.css' %}"> {% endcomment %}
     {% block links %}rel="stylesheet" href="{% static 'styles.css' %}"{% endblock links %}
 {% block body %}
-<form method="post" actions="/booknow"> 
-{% csrf_token %}
+<form method="post" action="/booknow/">
+  {% csrf_token %}
   <div id="booking" class="section">
     <div class="section-center">
       <div class="container">
         <div class="row">
           <div class="booking-form">
             <div class="form-header"><h1>Make your reservation</h1></div>
-            <form>
               <div class="form-group">
                 <input
-                  id = "country-zip"
-                  name = "country-zip"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  type="text"
+                  placeholder="Name"
+                />
+                <span class="form-label">Name</span>
+              </div>
+              <div class="form-group">
+                <input
+                  id="country_zip"
+                  name="country_zip"
                   class="form-control"
                   type="text"
                   placeholder="Country, ZIP, city..."
@@ -40,8 +48,8 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="form-group">
-                    <select class="form-control" required>
-                      <option value="" id="rooms" name="rooms" selected hidden>no of rooms</option>
+                    <select class="form-control" name="rooms" required>
+                      <option value="" selected hidden>Number of rooms</option>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -52,8 +60,8 @@
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
-                    <select class="form-control" required>
-                      <option value="" id ="adults" name="adults" selected hidden>no of adults</option>
+                    <select class="form-control" name="adults" required>
+                      <option value="" selected hidden>Number of adults</option>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -64,8 +72,8 @@
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
-                    <select class="form-control" required>
-                      <option value="" id="children" name="children" selected hidden>no of children</option>
+                    <select class="form-control" name="children" required>
+                      <option value="" selected hidden>Number of children</option>
                       <option>0</option>
                       <option>1</option>
                       <option>2</option>
@@ -95,7 +103,7 @@
                       type="tel"
                       id="phonenumber"
                       name="phonenumber"
-                      placeholder="Enter you Phone"
+                      placeholder="Enter your Phone"
                     />
                     <span class="form-label">Phone</span>
                   </div>
@@ -111,4 +119,19 @@
     </div>
   </div>
 </form>
+
+
+<script>
+  // Add an event listener to the form submission
+  document.getElementById("booking-form").addEventListener("submit", function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Hide the form
+    document.getElementById("booking").style.display = "none";
+
+    // Show the notification
+    document.getElementById("notification").style.display = "block";
+  });
+</script>
 {% endblock body %}
