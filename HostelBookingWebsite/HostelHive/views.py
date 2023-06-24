@@ -13,7 +13,8 @@ def send_email(subject, message, recipients):
     smtp_server = "smtp.gmail.com"
     smtp_port = 587  # Change it according to your SMTP server configuration
     smtp_username = "hostelhive00@gmail.com"
-    smtp_password = "uprmgeoqsbeguwqr"
+    smtp_password = SMTP_PASSWORD
+
     # Email content
     email_from = "hostelhive00@gmail.com"
     email_to = recipients
