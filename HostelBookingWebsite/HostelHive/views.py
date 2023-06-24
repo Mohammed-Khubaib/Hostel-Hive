@@ -14,7 +14,6 @@ def send_email(subject, message, recipients):
     smtp_port = 587  # Change it according to your SMTP server configuration
     smtp_username = "hostelhive00@gmail.com"
     smtp_password = "uprmgeoqsbeguwqr"
-
     # Email content
     email_from = "hostelhive00@gmail.com"
     email_to = recipients
@@ -54,8 +53,6 @@ def send_email(subject, message, recipients):
 
 def index(request):
     return render(request,'index.html')
-# def khubaib(request):
-#     return HttpResponse("Khubaib is working on Django this time")
     
 def home(request):
     return HttpResponse("This is the home page")
@@ -112,7 +109,7 @@ def booknow(request):
                     HostelHive
                     hostelhive00@gmail.com
                     """
-            recipients = ["mohammedkhubaib20@gmail.com", "mohammedkhubaib.a@gmail.com",email]
+            recipients = [email]
             send_email(subject, message, recipients)
         except Exception as e:
             messages.error(request, f"An error occurred while saving the reservation: {str(e)}")
