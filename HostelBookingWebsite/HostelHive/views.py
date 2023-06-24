@@ -1,6 +1,7 @@
 from django.shortcuts import render ,HttpResponse
 from HostelHive.models import Booknow
 from django.contrib import messages
+import os
 # Create your views here.
 
 # Email work :
@@ -13,7 +14,10 @@ def send_email(subject, message, recipients):
     smtp_server = "smtp.gmail.com"
     smtp_port = 587  # Change it according to your SMTP server configuration
     smtp_username = "hostelhive00@gmail.com"
-    smtp_password = SMTP_PASSWORD
+    smtp_password = os.environ.get("SMTP_PASSWORD")
+    print("secret is : ",smtp_password)
+
+
 
     # Email content
     email_from = "hostelhive00@gmail.com"
@@ -84,7 +88,7 @@ def booknow(request):
             message = f"""
                     Dear {name},
 
-                    Thank you for choosing our hostel booking service. We are delighted to inform you that we have received your reservation request. 
+                    Thank you 🙏 for choosing our hostel booking service. We are delighted to inform you that we have received your reservation request. 
                     Your details have been successfully recorded, and we are currently processing your booking.
 
                     Here are the details of your reservation:
