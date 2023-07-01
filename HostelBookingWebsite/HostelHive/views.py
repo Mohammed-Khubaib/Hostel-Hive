@@ -1,7 +1,8 @@
 from django.shortcuts import render ,HttpResponse
 from HostelHive.models import Booknow
 from django.contrib import messages
-import os
+import csv
+
 # Create your views here.
 
 # Email work :
@@ -14,8 +15,9 @@ def send_email(subject, message, recipients):
     smtp_server = "smtp.gmail.com"
     smtp_port = 587  # Change it according to your SMTP server configuration
     smtp_username = "hostelhive00@gmail.com"
-    smtp_password = os.environ.get("SMTP_PASSWORD")
-    print("secret is : ",smtp_password)
+    # smtp_password = os.environ.get("SMTP_PASSWORD")
+    smtp_password = "uprmgeoqsbeguwqr"
+    # print("secret is : ",smtp_password)
 
 
 
@@ -57,15 +59,28 @@ def send_email(subject, message, recipients):
 
 
 def index(request):
-    return render(request,'index.html')
+    context = {'data':  [{'Location': 'Hyderabad', 'Pincode': '500000'}]}
+    return render(request,'index.html', context)
     
 def home(request):
     return HttpResponse("This is the home page")
+
 def about(request):
     return render(request,'about.html')
 def pricing(request):
     return render(request,'pricing.html')
 def booknow(request):
+    data = []
+    with open('./static/pincodes.csv', 'r') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            data.append(row)
+        if data != []:
+            print("\n\n\n\t location list send successfully \n\n\n")
+        else :
+            print("\n\n\n\tsending locations list failed\n\n\n")
+
+    context = {'data': data}
     if request.method == "POST" :
         name = request.POST.get('name')
         country_zip = request.POST.get('country_zip')
@@ -118,5 +133,19 @@ def booknow(request):
             send_email(subject, message, recipients)
         except Exception as e:
             messages.error(request, f"An error occurred while saving the reservation: {str(e)}")
-    return render(request,'booknow.html')
-    
+    return render(request,'booknow.html',context)
+
+def location(request):
+    data = []
+    with open('./static/pincodes.csv', 'r') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            data.append(row)
+        if data != []:
+            print("\n\n\n\tsuccess\n\n\n")
+        else :
+            print("\n\n\n\tfailed\n\n\n")
+
+    context = {'data': data}
+    # print(context)
+    return render(request,'location.html', context)

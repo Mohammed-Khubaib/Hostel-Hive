@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Select Location{% endblock title %}
+{% load static %}
+{% block links %}rel="stylesheet" href="{% static 'styles.css' %}"{% endblock links %}
+
+{% block body %}
+<div class="container text-center mt-3">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/gallery6.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Hotel Name 1</h5>
+          <p class="card-text">Price : ₹6000/month</p>
+          <a href="booknow/" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/gallery1.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Hotel Name 2</h5>
+          <p class="card-text">Price : ₹5200/month</p>
+          <a href="booknow/" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/home-slide1.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Hotel Name</h5>
+          <p class="card-text">Price : ₹5000/month</p>
+          <a href="booknow/" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+{% endblock body %}

@@ -27,7 +27,13 @@
          <a href="#gallery">gallery</a>
          <a href="#review">review</a>
          <a href="#faq">faq</a>
-         <a href="booknow/" class="btn"> book now</a>
+         {% comment %} <a href="location/" class="btn"> book now</a> {% endcomment %}
+         <select id="citySelect" onchange="openCityPage()" class="form-select btn" aria-label="Default select example">
+            <option selected>Select Location</option>
+            {% for item in data %}
+            <option value="{{ item.Location }}">{{ item.Location }}</option>
+            {% endfor %}
+        </select>
          
       </nav>
 
@@ -443,6 +449,14 @@ Safe travels,
    <!-- end -->
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
    <script src="{% static 'script.js'%}"></script>
-
+   <script>
+      function openCityPage() {
+         var city = document.getElementById("citySelect").value;
+         if(city != "Select Location"){
+            window.open("location/");
+         }
+       }
+       
+   </script>
 </body>
 </html>
