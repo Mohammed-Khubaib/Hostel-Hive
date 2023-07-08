@@ -59,7 +59,18 @@ def send_email(subject, message, recipients):
 
 
 def index(request):
-    context = {'data':  [{'Location': 'Hyderabad', 'Pincode': '500000'}]}
+    data = []
+    with open('./static/pincodes.csv', 'r') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            data.append(row)
+        if data != []:
+            print("\n\n\n\t location list send successfully \n\n\n")
+        else :
+            print("\n\n\n\tsending locations list failed\n\n\n")
+
+    context = {'data': data}
+
     return render(request,'index.html', context)
     
 def home(request):
